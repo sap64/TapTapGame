@@ -1,0 +1,292 @@
+<html>
+    
+    <head>
+        
+       <style>
+        
+        body,html{
+            padding:0;
+            margin:0;
+            width:100%;
+            height:100%;
+            background-color:whitesmoke;
+        }
+        
+        
+        li{
+                list-style:none;
+                width:90%;
+                min-width:800px;
+                padding:10px;
+                border-radius:3px;
+                background-color:#f8f8f8;
+                margin-right:auto;
+                margin-left:auto;
+                margin-top:15px;
+                color:#630;
+                font-family:arial,-sans-serif;
+                border:1px solid #D0D0D0;
+                margin-bottom:10px;
+        }
+        
+        
+        li:first-child{
+                margin-top:100px;
+        }
+        
+        #header{
+            background-color:black;
+            height:50px;
+            left:0;
+            top:0;
+            position:relative;
+            color:white;
+            text-align:center;
+            font-family:arial,sans-serif;
+            width:100%;
+            font-size:22px;
+            line-height:50px;
+        }
+        
+        .function{
+            display:block;
+            font-weight:bold;
+            font-size:23px;
+            margin-bottom:10px;
+            
+        }
+        
+        
+        .example{
+            display:block;
+            margin-top:10px;
+            font-size:18px;
+        }
+        
+        .alert{
+            color:red;
+        }
+        
+       </style>
+       
+        
+       
+        <link rel="stylesheet" href="http://yandex.st/highlightjs/7.4/styles/default.min.css">
+<script src="http://yandex.st/highlightjs/7.4/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+    </head>
+    
+    
+    
+     
+        <body>
+            <div id="header">
+                Daniel Nasello's Mobile Anination/Transition Library
+            </div>
+            
+            <li>
+                <div class="alert">Read First</div>
+                <p class="intro">MobileTrans.js is a mobile transitions library that does everything from
+                transitioning between two screens or showing modal screens/pop ups. To use this library, there are some things that need to be understood first.
+                ONLY ELEMENTS WITH POSITION ABSOLUTE can have animations applied to them. If you try to apply an animation to an element that does not have position absolute
+                it will not work correctly. This Library Replaces any classes previously applied to the element. Meaning... if you have styles such as color, background-color, height width etc, they should all be applied to the id of the element.
+                </p>
+                
+                <p class="intro">Boilerplate styles. any element that will act as a screen of your application should have the following styles applied to them:</p>
+                
+         <pre>  <code>     <span class="code">
+               #element{<br>
+                   &nbsp; position:absolute;<br>
+                  &nbsp;   height:100%;<br>
+                     &nbsp; width:100%;<br>
+                    &nbsp; display:none;<br>
+                }
+                </span></code></pre>
+                <p class="intro">The library will handle the showing and hiding of elements. All screens except for your first screen should be hidden at start, and the library will do the rest</p>
+
+
+                <p class="intro">Again, this is only for elements that will be used as screens. If you want to transition smaller elements, you may, however, make sure all styles are applied to the id and not the class</p>
+                            
+                            
+                    <p class="intro">NOTE: all elements must be called by their ID. IE, if you want to fade an element out, you must either know or rertrieve its id in order for the library to fade it out. All exampled below are demonstrated with an elements ID</p>
+                </span>
+                
+                
+                <p class="intro">How it works:</p>
+                
+                <p>Using JavaScript to change or "trigger" changes in the Class of HTML elements that have CSS animations attached to them. Lets look at the following:</p>
+          
+          
+               <span class="code">
+           <pre>  <code>         
+          
+    @-webkit-keyframes cf3FadeIn {<br>
+	 &nbsp0% {opacity:0;}<br>
+	 &nbsp100% { opacity:1;}<br>
+	}<br>	<br>
+
+                
+        .fadein{<br>
+	 &nbsp -webkit-transform: translate3d(0px,0px,0px);<br>
+	 &nbsp -webkit-perspective:1000;<br>
+	 &nbsp -webkit-backface-visibility:none;<br>
+	 &nbsp -webkit-animation-name: cf3FadeIn;<br>
+         &nbsp  -webkit-animation-iteration-count: 1;<br>
+         &nbsp  -webkit-transform hardware acceleration;<br>
+         &nbsp  -webkit-animation-duration: .4;<br>
+         &nbsp  -webkit-animation-direction: normal;<br>
+         &nbsp  opacity:1;<br>
+         &nbsp   z-index:998;<br>
+    }</span><br>
+          </code></pre>
+          
+          <p class="intro">Lets take a look at the class "fadein". this is the class applied to an element if we want our element to start at opacity 0, and keyframe to opacity 1 (from completely transparent to visible.</p>
+          
+          <p class="intro">Notice Three things about the fade in class.Not only do i have the "keyframe above linked", I also defined "opacity:1".</p>
+          
+          <p>Why this is imperitive: Becuase when keyframe animations are done being performed, elements go back to their original or "resting state". ie once the fadein animation is complete, it would go back to being invisible. To prevent this, I
+          define opacity:1 in my new fade in class in order to keep the state and make sure the transition/animation is one way and will stay "as is" when done. This same rule applies to all my classes whether it be translation rotation skew opacity etc. </p>
+       
+       <p class="intro">Notice the use of parameters. None of the element ids are hardcoded. This allows us to dynamically change the "context" of the function in order for us to
+       transition in/out any screen/element as we see fit</p>
+            </li>
+            
+            
+            
+            <li>
+                
+                  <pre>  <code>         
+            <span class="function">fade("out","in");</span></code></pre>
+                
+                
+                <span class="intro">This function takes two elements and fades one in and one out. </span>
+                
+                <span class="intro"> For example, I am on a page with an id of screen_one and I want to transition to  an element with an id of screen_two I would simply call</span>
+                <pre>  <code>         
+             <span class="example"> fade("screen_one","screen_two");</span></code></pre>
+   
+            </li>
+            
+             
+            
+               <li>
+                
+                  <pre>  <code>         
+            <span class="function">slideleft("out, "in");</span>
+                </code></pre>
+                
+                
+                <span class="intro">This function takes two elements and slides the "incoming element in from the right and slides the outgoing div to the left using translation. </span>
+                
+                <span class="intro"> For example, I am on a page with an id of screen_one and I want to transition to  an element with an id of screen_two I would simply call</span>
+               <pre>  <code>         
+              <span class="example"> slideleft("screen_one","screen_two");</span>
+   </code></pre>
+            </li>
+            
+               <li>
+                
+                  <pre>  <code>         
+            <span class="function">slideright("out" , "in");</span>
+                
+              </code></pre>
+                
+                <span class="intro"> This function takes two elements and slides the "incoming element in from the left and slides the outgoing div to the right using translation.</span>
+          <span class="intro"> For example, I am on a page with an id of screen_one and I want to transition to  an element with an id of screen_two I would simply call</span>
+                 <pre>  <code>         
+            <span class="example"> slideright("screen_one","screen_two");</span></code></pre>
+              </code></pre>
+            </li>
+            
+            
+            
+              <li>
+                          
+          
+                <pre>  <code>         
+              <span class="function">slideup("in","out");</span>
+                </code></pre>
+                
+                  <span class="intro"> This function takes two elements and slides the "incoming element in from the bottom and slides the outgoing div going up using translation.</span>
+          <span class="intro"> For example, I am on a page with an id of screen_one and I want to transition to  an element with an id of screen_two I would simply call</span>
+                <pre>  <code>         
+             <span class="example"> slideup("screen_one","screen_two");</span></code></pre>
+   </code></pre>
+            </li>
+                  <li>
+                
+              <pre>  <code>         
+                <span class="function">slidedown("in","out");</span>
+                </code></pre>
+                
+                  <span class="intro"> This function takes two elements and slides the "incoming element in from the top and slides the outgoing div going downward using translation.</span>
+          <span class="intro"> For example, I am on a page with an id of screen_one and I want to transition to  an element with an id of screen_two I would simply call</span>
+               <pre>  <code>         
+              <span class="example"> slidedown("screen_one","screen_two");</span></code></pre>
+   
+            </li>
+             <li>
+                
+                  <pre>  <code>         
+            <span class="function">shake("shake");</span>
+                </code></pre>
+                
+                  <span class="intro">This function takes one element and applies the shake class to it which has a key-frame animation to emulate the phone rumbling or shaking</span>
+          <span class="intro"> For example if you have a password screen and the user enters an incorrect passowrd you can make the password_screen shake like so</span>
+                 <pre>  <code>         
+            <span class="example"> shake("password_screen")</span></code></pre>
+   
+            </li>
+                  <li>
+                
+                 <pre>  <code>         
+             <span class="function">fadeIn("in")</span>
+                </code></pre>
+                
+                  <span class="intro"> This function takes one screen and fades it in. </span>
+          <span class="intro"> For example, you have an image or some sort of popout/modal screen that you would like to bring into the document with a smooth fade transition you would do it like so:</span>
+                <pre>  <code>         
+             <span class="example"> fade("one");</span></code></pre>
+   
+            </li>
+                  
+                       <li>
+                
+                 <pre>  <code>         
+             <span class="function">fadeOut("out");</span>
+                </code></pre>
+                
+                  <span class="intro"> This animation takes an element and fades it out of sight and hides it</span>
+          <span class="intro"> For example, we want to hide or dismiss a popout or modal screen that we faded in. we can then fade it out like so:</span>
+                <pre>  <code>         
+             <span class="example"> fadeOut("out");</span></code></pre>
+   
+            </li>
+                       
+                            <li>
+                
+                <pre>  <code>         
+              <span class="function">slideoneup("in");</span>
+                
+                </code></pre>
+                  <span class="intro">This animation allows us to slide a modal screen from the bottom of the page up to the top </span>
+          <span class="intro"> For example, I click a thumbnail of a picture and I want to slide up another div to see it full screen. I would do it like so:</span>
+                <pre>  <code>         
+             <span class="example"> slideoneup("fullview");</span></code></pre>
+   
+            </li>
+                                           <li>
+                
+                  <pre>  <code>         
+            <span class="function">slideonedown("out");</span>
+                </code></pre>
+                
+                  <span class="intro"> This animation allows us to slide down an element and ultimately hide it from view</span>
+          <span class="intro"> For example, I am done looing a picture full screen and I want to dismiss the modal view. I would do it like so:</span>
+                 <pre>  <code>         
+            <span class="example"> slideonedown("fullview")</span></code></pre>
+   
+            </li>
+        </body>
+        
+</html>

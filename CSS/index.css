@@ -1,0 +1,379 @@
+body,html{
+	height:100%;
+	width:100%;
+	margin:0px;
+	padding:none;
+	background-color: black;
+	}
+
+
+li{
+	-webkit-transition:.3s;
+}
+
+.nopadding{
+	padding:0;
+	margin:0px;
+	list-style-type:none;
+	}
+/*First row button's styles*/	
+
+
+#loginPage{
+	position:absolute;
+	height: 100%;
+	width: 100%;
+	text-align: center;
+	font-family:helvetica;
+	}
+
+#fbook{
+	position:absolute;
+	background-color:#3B5998;
+	height: 50px;
+	width:45%;	
+	line-height: 50px;
+	color:white;
+	left: 5%;
+	bottom: 5%;
+	border-radius: 2.75px;
+	}
+	
+#twttr{
+	position:absolute;
+	background-color:#00ACED;
+	height: 50px;
+	width:45%;	
+	line-height: 50px;
+	color:white;
+	right: 5%;
+	bottom:5%;
+	border-radius: 2.75px;
+	}
+	
+#startButton{
+	position:relative;
+	background-color:whitesmoke;
+	height:50px;
+	width:45%;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+	line-height:50px;
+	margin-top: auto;
+	margin-bottom:auto;
+	top: 50%;
+	font-family:helvetica;
+	border-radius: 2.75px;
+	display:none;
+	}
+	
+#gamePage{
+	position:absolute;
+	height: 100%;
+	width: 100%;
+	display:none;
+	}
+#timerOne{
+	position:absolute;
+	height:19%;
+	color:whitesmoke;
+	font-size:30px;
+	font-family:helvetica;
+	right:0;
+	top:15%;
+	display:none;
+	}
+#pressTile{
+	position:absolute;
+	height:10%;
+	width:15%;
+	left:0;
+	bottom:80%;
+	background-color:white;
+	display:none;
+	}
+	
+	
+	
+#gameScore{
+	position:absolute;
+	color:whitesmoke;
+	font-size:30px;
+	height:19%;
+	left:45%;
+	top:15%;
+	font-family:helvetica;
+	display:none;
+	}
+	
+
+
+	
+#rowOne{
+	position:absolute;
+	height:20%;
+	width:100%;
+	top:20%;
+	padding:none;
+	}
+
+#one{
+	position:absolute;
+	width:25%;
+	height:100%;
+	left:0;
+	}
+	
+#two{
+	position:absolute;
+	width:25%;
+	height:100%;
+	left:25%;
+	}
+	
+#three{
+	position:absolute;
+	width:25%;
+	height:100%;
+	right:25%;
+	}
+	
+#four{
+	position:absolute;
+	width:25%;
+	height:100%;
+	right:0;
+	}
+/*End First Row Buttons style*/
+/*Start Second Row Button's Styles*/
+#rowTwo{
+	position:absolute;
+	height:20%;
+	width:100%;
+	top:40%;
+	padding:none;
+	}
+	
+#five{
+	position:absolute;
+	width:25%;
+	height:100%;
+	left:0;
+	}
+	
+#six{
+	position:absolute;
+	width:25%;
+	height:100%;
+	left:25%;
+	}
+	
+#seven{
+	position:absolute;
+	width:25%;
+	height:100%;
+	right:25%;
+	}
+	
+#eight{
+	position:absolute;
+	width:25%;
+	height:100%;
+	right:0;
+	}
+/*End Second Row Button's Style*/
+/*Start Third Row Button's Style*/
+#rowThree{
+	position:absolute;
+	height:20%; 
+	width:100%;
+	top:60%;
+	padding:none;
+	}
+
+#nine{
+	position:absolute;
+	width:25%;
+	height:100%;
+	left:0;
+	}
+	
+#ten{
+	position:absolute;
+	width:25%;
+	height:100%;
+	left:25%;
+	}
+	
+#eleven{
+	position:absolute;
+	width:25%;
+	height:100%;
+	right:25%;
+	}
+	
+#twelve{
+	position:absolute;
+	width:25%;
+	height:100%;
+	right:0;
+	}
+/*End Third Row Buttons Styles*/
+/*Start Fourth Row Buttons Styles*/
+#rowFour{
+	position:absolute;
+	height:20%;
+	width:100%;
+	bottom:0;
+	padding:none;
+	}
+	
+#thirteen{
+	position:absolute;
+	width:25%;
+	height:100%;
+	left:0;
+	}
+	
+#fourteen{
+	position:absolute;
+	width:25%;
+	height:100%;
+	left:25%;
+	}
+	
+#fifteen{
+	position:absolute;
+	width:25%;
+	height:100%;
+	right:25%;
+	}
+
+#sixteen{
+	position:absolute;
+	width:25%;
+	height:100%;
+	right:0%;
+	}
+	
+#gameOver{
+	position:absolute;
+	color:whitesmoke;
+	font-family:helvetica;
+	height:100%;
+	width:100%;
+	background-color: rgba(248,80,50,1);
+	display:none;
+	}
+
+#yourScore{
+	position:relative;
+	margin-left:auto;
+	margin-right:auto;
+	width:130px;
+	height:50px;
+	top:50%;
+	line-height:50px;
+	color: black;
+	font-weight:700;
+	}	
+
+#finalScore{
+	position:relative;
+	top:50%;
+	margin-left:auto;
+	margin-right:auto;
+	color:black;
+	width:10px;
+	height:50px;
+	line-height:50px;
+	font-weight:bold;
+	}
+	
+#retryButton{
+	position:absolute;
+	width: 25%;
+	height:20px;
+	bottom:25%;
+	left:20%;
+	font-weight:bold;
+	}
+
+#shareButton{
+	position:absolute;
+	width:25%;
+	height:20px;
+	bottom:25%;
+	right:10%;
+	font-weight:bold;
+	}
+	
+	
+
+.colorGreen{
+	background-color:green;
+}
+
+.colorRed{
+	background-color:red;
+}
+
+.colorYellow{
+	background-color:yellow;
+}
+
+.colorLime{
+	background-color:lime;
+}
+
+.colorAqua{
+	background-color:aqua;
+}
+
+.colorPink{
+	background-color:pink;
+}
+
+.colorPurple{
+	background-color:purple;
+}
+
+.colorOrange{
+	background-color:orange;
+	}
+	
+.colorWhite{
+	background-color:whitesmoke;
+	}
+.colorCyan{
+	background-color:#008B8B;
+	}
+	
+.colorCrimson{
+	background-color:crimson;
+	}
+	
+.colorSpring{
+	background-color: #00FF7F;
+	}
+	
+.colorFuchsia{
+	background-color:fuchsia;
+	}
+
+.colorViolet{
+	background-color:#8A2BE2;
+	}
+	
+.colorGold{
+	background-color:gold;
+	}
+	
+.colorRedOrange{
+	background-color:#FF4500;
+	}
+	
+.tileEffect{
+	-webkit-transform: scale(0.6,0.6);
+	}
