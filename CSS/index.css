@@ -3,7 +3,7 @@ body,html{
 	width:100%;
 	margin:0px;
 	padding:none;
-	background-color: black;
+	background-color: #323232;
 	}
 
 
@@ -26,6 +26,10 @@ li{
 	text-align: center;
 	font-family:helvetica;
 	}
+
+#gameTitle{
+	color:whitesmoke ;
+}
 
 #fbook{
 	position:absolute;
@@ -53,7 +57,7 @@ li{
 	
 #startButton{
 	position:relative;
-	background-color:whitesmoke;
+	background-color:#C7C7CC;
 	height:50px;
 	width:45%;
 	margin-left:auto;

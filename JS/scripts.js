@@ -3,6 +3,7 @@
 
 $( document ).ready(function() {
     console.log( "ready!" );	
+	changeColor();
 	});
 	
 $("#fbook").on("touchstart",function(){
@@ -77,6 +78,7 @@ function counterOne(){
 		if (count == 0){
 			clearInterval(counter);
 			//counter ended, do something here
+			fade("gamePage","gameOver");
 			
 		}
 			
@@ -117,6 +119,10 @@ function scoreKeeper(){
 
 
 //End of function
+
+
+
+
 
 	
 $("li").on("touchend",function(){
