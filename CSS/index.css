@@ -24,7 +24,7 @@ li{
 	height: 100%;
 	width: 100%;
 	text-align: center;
-	font-family:helvetica;
+	font-family: Helvetica;
 	}
 
 #gameTitle{
@@ -320,7 +320,7 @@ li{
 }
 
 .colorRed{
-	background-color:red;
+	background-color: #FF1300;
 }
 
 .colorYellow{
@@ -340,18 +340,18 @@ li{
 }
 
 .colorPurple{
-	background-color:purple;
+	background-color:#5856D6;
 }
 
 .colorOrange{
-	background-color:orange;
+	background-color:#FF9500;
 	}
 	
 .colorWhite{
-	background-color:whitesmoke;
+	background-color:#F7F7F7;
 	}
 .colorCyan{
-	background-color:#008B8B;
+	background-color:#55EFCB;
 	}
 	
 .colorCrimson{
@@ -371,11 +371,11 @@ li{
 	}
 	
 .colorGold{
-	background-color:gold;
+	background-color: #C5B358;
 	}
 	
 .colorRedOrange{
-	background-color:#FF4500;
+	background-color:#FF5E3A;
 	}
 	
 .tileEffect{

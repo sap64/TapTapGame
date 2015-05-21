@@ -64,7 +64,7 @@ function shuffleArray(array) {
 //Timer One function
 var count = 30;
 function counterOne(){
-	var counter=setInterval(timer, 1000);//1000 will  run it every 1 second
+	var counter = setInterval(timer, 1000);//1000 will  run it every 1 second
 
 	
 	
@@ -99,23 +99,19 @@ function counterOne(){
 
 //Score counter fucntion
 var score = 0;	
-
-function scoreKeeper(){
-	if(score < 10){
-		score = "0" + score;
-	}
-	document.getElementById("gameScore").innerHTML = score ;
-	
-	$("li").on("touchstart",function(){
+$("li").on("touchstart",function(scoreKeeper){
 		if ($(this).hasClass("colorGreen")){
 			score++;
 		}
 	});
+function scoreKeeper(){
+	if(score < 10){
+		score = "0" + score;
+	}
+
+	document.getElementById("gameScore").innerHTML = score ;
 	
-	
-	
-	
-}
+	}
 
 
 //End of function
