@@ -21,7 +21,7 @@ $("#startButton").on("touchend",function(){
 	fadeIn("pressTile");
 	fadeIn("gameScore");
 	counterOne();
-	scoreKeeper();
+	
 	
 	});
 
@@ -99,41 +99,36 @@ function counterOne(){
 
 //Score counter fucntion
 var score = 0;	
-$("li").on("touchstart",function(scoreKeeper){
-		if ($(this).hasClass("colorGreen")){
-			score++;
-		}
-	});
-function scoreKeeper(){
-	if(score < 10){
+
+
+		if(score < 10){
 		score = "0" + score;
-	}
-
-	document.getElementById("gameScore").innerHTML = score ;
-	
-	}
-
-
-//End of function
-
-
-
-
+document.getElementById("gameScore").innerHTML = score ;
+		}
 
 	
 $("li").on("touchend",function(){
 	if ($(this).hasClass("colorGreen")){
 	 changeColor();
+	
 		
-	}
+	 	document.getElementById("gameScore").innerHTML = score ;
+		score++;
+
+	} 
+	
 	
 		else{
 		
 			count = 0;
+			//score = 0;
 			fade("gamePage","gameOver");
 			fadeOut("timerOne");
 		}
 });
+
+var finalScore = score;
+	document.getElementById("finalScore").innerHTML = finalScore;
 
 $("#retryButton").on("touchend",function(){
 	fade("gameOver","gamePage");
